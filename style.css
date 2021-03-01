@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  text-align: center;
+}
+
+body h1 {
+  padding: 100px 0px 0px 0px;
+  font-size: 38px;
+  font-weight: 900;
+  margin: 0px;
+}
+
+body h2 {
+  padding: 0px 0px 100px 0px;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+#pages {
+  margin: 25px 0;
+}
+
+#pages div {
+  height: 320px;
+  border-radius: 5px;
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: height 0.2s, -webkit-transform 0.2s;
+  transition: height 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, height 0.2s;
+  transition: transform 0.2s, height 0.2s, -webkit-transform 0.2s;
+  border: 1px solid #ddd;
+}
+
+#pages div:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+#pages div iframe {
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#models {
+  margin: 25px 0;
+}
+
+#models div {
+  border: 1px solid #ddd;
+  min-height: 140px;
+  -webkit-transition: height 0.2s;
+  transition: height 0.2s;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+  position: relative;
+  padding: 0px;
+}
+
+#models div .delete {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: inherit;
+  color: red;
+  padding: 0px;
+}
+
+#models div .name {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+}
+
+#models div .schema {
+  width: 100%;
+  border: none;
+  height: 100%;
+  min-height: 200px;
+  margin-bottom: 0px;
+}
+
+.addButtonSection {
+  margin-bottom: 80px;
+  padding-bottom: 50px;
+}
+
+section {
+  position: relative;
+  max-width: 800px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 25px;
+  text-align: justify;
+}
+
+section a {
+  position: absolute;
+  text-align: center;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  padding: 25px;
+  bottom: -50px;
+  left: calc(50% - 50px);
+  -webkit-box-shadow: inset 0px 0px 0px #ddd;
+          box-shadow: inset 0px 0px 0px #ddd;
+  -webkit-transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+  transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+  transition: box-shadow 0.1s, transform 0.1s;
+  transition: box-shadow 0.1s, transform 0.1s, -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+section a:hover {
+  -webkit-box-shadow: inset 0px 0px 5px #ddd;
+          box-shadow: inset 0px 0px 5px #ddd;
+  cursor: pointer;
+}
+
+section a:active {
+  -webkit-box-shadow: 0px 0px 5px #ddd;
+          box-shadow: 0px 0px 5px #ddd;
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+section label {
+  text-align: left;
+  font-weight: 900;
+  display: block;
+  padding-top: 20px;
+}
+
+section input, section select, section textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+section textarea {
+  resize: vertical;
+}
+
+section button {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: -webkit-gradient(linear, left top, right top, from(#d53369), to(#daae51));
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  color: white;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  font-weight: 100;
+}
+
+section button:hover {
+  -webkit-transform: scale(0.95, 1.1);
+          transform: scale(0.95, 1.1);
+  cursor: pointer;
+}
+
+section button:active {
+  -webkit-transform: scale(1.1, 0.9);
+          transform: scale(1.1, 0.9);
+}
+
+.fullpage {
+  position: fixed;
+  background: #fff;
+  -webkit-transition: left 0.8s, top 0.5s, width 0.8s, height 0.5s, opacity 0.5s;
+  transition: left 0.8s, top 0.5s, width 0.8s, height 0.5s, opacity 0.5s;
+  -webkit-box-shadow: 0px 0px 5px #ddd;
+          box-shadow: 0px 0px 5px #ddd;
+}
+
+.fullpage div {
+  display: block;
+  position: absolute;
+  top: 10vh;
+  bottom: 10vh;
+  left: 30vw;
+  right: 5vw;
+}
+
+.fullpage div iframe {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.fullpage a {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.fullpage a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fullpage nav {
+  position: absolute;
+  top: 10vh;
+  left: 0vw;
+  right: 70vw;
+  bottom: 10vh;
+}
+
+.fullpage nav b {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 10px 25px;
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fullpage nav p {
+  text-align: right;
+  margin: 15px 25px 0px 25px;
+}
+
+.fullpage nav input, .fullpage nav select {
+  width: calc(100% - 50px);
+  margin: 5px 25px;
+}
+
+.shown {
+  left: 0vw;
+  top: 0vw;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+}
+
+.hidden {
+  left: 50vw;
+  top: 50vh;
+  width: 0vw;
+  height: 0vh;
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */

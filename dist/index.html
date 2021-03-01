@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caramocha</title>
+
+    <!-- Imported Scripts -->
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.4/jszip.min.js" type="text/javascript"></script>
+    <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+
+    <!-- Scripts -->
+    <script src="/src.f10117fe.js"></script>
+    <!-- <script src="/src/polish.ts"></script> -->
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/style.e308ff8e.css">
+
+    <meta name="description" content="Build a Fullstack, Scalable, and Fast Website within Minutes.">
+<script src="/style.e308ff8e.js"></script></head>
+<body>
+    <!-- Stop Page Fade on Load -->
+    <script> </script> 
+    <h1>Caramocha</h1>
+    <h2 id="subtext">Build a Website in Minutes.</h2>
+    <section>
+        <h3>Heya Stranger!</h3>
+        <p>You might have stumbled on this page wondering what it does. In short, this website allows people to generate fullstack websites by just filling out a small form. Your website will be built using Node.js and will be scalable with any database solution you want. If you don't know what some of those words mean, you probably aren't a fullstack engineer, but that doesn't matter- we do all the heavy lifting for you. </p>
+        <p>In layman's terms, you can use Squarespace or Wix to build portfolio websites, but not much more. But, you can use Caramocha to generate a website like Twitter or Facebook. Caramocha can even work as a template for more specified websites- instead of rewriting code that is in most apps, you can just generate the 'normal' code with us, and then edit what you want. </p>
+        <p>So what are you still doing reading? Get to building your dreams!</p>
+    </section>
+    <section>
+        <h3>Some Metadata...</h3>
+        <p>You are going to need to fill out some basic information about what your website is called, what it does, and other things. It isn't completely necessary in production, but it is best practice.</p>
+    
+        <label for="name">Name</label>
+        <input type="text" name="" id="name" placeholder="Google">
+
+        <label for="author">Author</label>
+        <input type="text" name="" id="author" placeholder="Larry Page">
+
+        <label for="url">Domain</label>
+        <input type="text" name="" id="url" placeholder="google.com">
+
+        <label for="version">Version</label>
+        <input type="text" name="" id="version" placeholder="1.0.0">
+
+        <label for="license">License</label>
+        <p>The license is only important if you want to make your website open source, but if not, just choose 'unlicensed'. If you aren't sure which one to pick, just look it up on Google.</p>
+        <select name="" id="license">
+            <option value="unlicensed">Unlicensed</option>
+            <optgroup label="Permissive">
+                <option value="mit">MIT</option>
+                <option value="unlicense">The Unlicense</option>
+            </optgroup>
+            <optgroup label="GNU Licenses">
+                <option value="agpl-3.0">GNU Affero General Public License v3.0</option>
+                <option value="gpl-2.0">GNU General Public License v2.0</option>
+                <option value="gpl-3.0">GNU General Public License v3.0</option>
+                <option value="lgpl-2.1">GNU Lesser General Public License v2.1</option>
+            </optgroup>
+            <optgroup label="Other">
+                <option value="apache-2.0">Apache License 2.0</option>
+                <option value="bsd-2-clause">BSD 2-Clause "Simplified" License</option>
+                <option value="bsd-3-clause">BSD 3-Clause "New" or "Revised" License</option>
+                <option value="bsl-1.0">Boost Software License 1.0</option>
+                <option value="cc0-1.0">Creative Commons Zero v1.0 Universal</option>
+                <option value="epl-2.0">Eclipse Public License 2.0</option>
+            </optgroup>
+        </select>
+
+        <label for="description">Description</label>
+        <textarea id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</textarea>
+    
+    </section>
+    <section class="addButtonSection">
+        <h3>Frontend</h3>
+        <p>To create the design for the frontend, just click the button below to add a page. From there, you can design each page to your liking- changing colors, editing styles, and adding features.</p>
+        <label for="frontendType">Frontend Type</label>
+        <select id="frontendType">
+            <option value="none">None</option>
+            <option value="html" disabled="">HTML</option>
+            <option value="react" disabled="">React</option>
+            <option value="react-native">React Native</option>
+            <option value="flutter" disabled="">Flutter</option>
+        </select>
+        <div id="pages">
+
+        </div>
+        <a onclick="addPage()">
+            Add Page
+        </a>
+    </section>
+    <section class="addButtonSection">
+        <h3>Backend</h3>
+        <p>To create a new table for the database, just click the "Add Model" button below, and edit the data that it has within.</p>
+        <label for="backendType">Backend Type</label>
+        <select id="backendType">
+            <option value="none">None</option>
+            <option value="rest">Rest</option>
+            <option value="rpc" disabled="">RPC</option>
+            <option value="graphql" disabled="">GraphQL</option> 
+            <option value="falcor" disabled="">Falcor</option>
+            <!-- <option value="" disabled>Static</option> -->
+        </select>
+        <label style="display: none;" id="modelLabel" for="models">Models</label>
+        <div id="models">
+        </div>
+        <a id="createModel">
+            Add Model
+        </a>
+    </section>
+    <section>
+        <h3>Make Your Dreams Come True!</h3>
+        <p>Just click the button below to download the zip file for the website. From there, you can upload it to a service like Github, Heroku, or Docker. All are supported out of the box. Good luck, and best of travels!</p>
+        <button id="download">Download</button>
+    </section>
+<!-- 
+    <div id="fullpageOverlay" class="fullpage hidden">
+        <a id="hideOverlay">&#8606; Back</a>
+        <nav>
+            <b>General</b>
+            
+            <p>Page Name</p>
+            <input type="text">
+            
+            <p>Style Background Color</p>
+            <input id="pageBackgroundColor" type="color">
+
+            <p>Style Foreground Color</p>
+            <input id="pageForegroundColor" type="color">
+
+            <p>Style Text Color</p>
+            <input id="pageTextColor" type="color">
+
+            
+            <b>Topbar</b>
+            
+            <p>Positioning</p>
+            <select id="topbarPositioning">
+                <option value="topbar">Topbar</option>
+                <option value="left_sidebar">Left Sidebar</option>
+                <option value="right_sidebar">Right Sidebar</option>
+                <option value="bottombar">Bottombar</option>
+            </select>
+
+            <p>Styling</p>
+            <select id="topbarStyling">
+                <option value="solid">Solid</option>
+                <option value="paper">Paper</option>
+                <option value="layered">Layered</option>
+                <option value="cut_here">Cut Here</option>
+            </select>
+
+            <b>Core Settings</b>
+        </nav>
+        <div>
+            <iframe></iframe>
+        </div>
+    </div> -->
+
+</body>
+</html>
